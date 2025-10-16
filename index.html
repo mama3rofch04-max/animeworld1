@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anime Yanna — عالم الأنمي</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="#"><span class="logo-mark">🌸</span> <span class="logo-text">Anime Yanna</span></a>
+      </div>
+
+      <nav class="main-nav">
+        <a class="nav-link active" href="#">الرئيسية</a>
+        <a class="nav-link" href="#all-anime">الأنميات</a>
+        <a class="nav-link" href="#about">حول</a>
+      </nav>
+
+      <div class="header-actions">
+        <input id="search-input" class="search" type="search" placeholder="ابحث عن أنمي أو حلقة..." />
+        <button id="theme-toggle" class="btn small">وضع/ليلي</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>مرحباً بك في <span class="accent">Anime Yanna</span></h1>
+          <p>اكتشف آخر الحلقات، قوائم الأنميات الشهيرة ومشغل فيديو مدمج — تجربة مشاهدة احترافية.</p>
+          <div class="hero-cta">
+            <a href="#all-anime" class="btn large">ابدأ المشاهدة</a>
+            <a href="#featured" class="btn outline">الأكثر مشاهدة</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="featured-card" id="featured">
+            <img src="https://i.imgur.com/u6lZt3y.jpg" alt="Featured" />
+            <div class="featured-info">
+              <h3>Attack on Titan — الحلقة الأخيرة</h3>
+              <p class="meta">الموسم 4 • الحلقة 28</p>
+              <button class="btn play" data-video="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">شغّل الحلقة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST -->
+    <section class="section container">
+      <h2 class="section-title">🎬 آخر الحلقات المضافة</h2>
+      <div id="latest-grid" class="anime-grid">
+        <!-- JS will render cards here -->
+      </div>
+    </section>
+
+    <!-- ALL ANIME -->
+    <section id="all-anime" class="section container">
+      <h2 class="section-title">📚 كل الأنميات</h2>
+      <div id="all-grid" class="anime-grid">
+        <!-- JS will render all anime here -->
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container about">
+      <h2 class="section-title">حول Anime Yanna</h2>
+      <p>
+        موقع Anime Yanna هو منصة عرض حلقات أنمي بتصميم عصري، تجربة مشاهدة سريعة وبسيطة.
+        صمّمناه باش تكون تجربة المشاهدة عندك مريحة سواء فالتيليفون أو فالكمبيوتر.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>© <span id="year"></span> Anime Yanna — جميع الحقوق محفوظة</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Twitter">TW</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div id="video-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button id="close-modal" class="modal-close" aria-label="Close">✕</button>
+      <video id="modal-video" controls playsinline webkit-playsinline></video>
+      <div class="modal-meta">
+        <h3 id="modal-title">عنوان الحلقة</h3>
+        <p id="modal-desc">معلومات عن الحلقة</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
